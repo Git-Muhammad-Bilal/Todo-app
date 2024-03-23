@@ -1,0 +1,68 @@
+.auth-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.auth {
+    margin: auto;
+
+
+}
+
+
+.email,
+.password,
+.confirmPassword{
+    position: relative;
+    
+}
+
+.email input,
+.password input,
+.confirmPassword input {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.lgn-btn button,
+.lgn-btn a{
+    margin-right: 20px;
+    font-size: 17px;
+    padding: 5px;
+    border: none;
+    background-color: #f49f1c;
+    color: black;
+    text-decoration: none;
+
+}
+
+.auth textarea:focus,
+input:focus {
+    outline: none;
+    ;
+}
+
+
+
+.error {
+    width: 200px;
+}
+
+.required {
+    width: 200px;
+    margin-top: -15px;
+    margin-bottom: 0;
+    color: red;
+}
+
+.passhide {
+    position: absolute;
+    right: 50px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
