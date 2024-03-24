@@ -57,7 +57,7 @@ function Todos({email}) {
                     
                 </div>
                 <div className="input-add-cont">
-                    <TypeTodo fetchTerm={fetchTerm} term={val} />
+                    <TypeTodo fetchTerm={fetchTerm} term={val} createTodo ={createTodo}/>
                     <button
                         className="create-todo-button"
                         onClick={createTodo}>Add

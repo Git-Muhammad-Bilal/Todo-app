@@ -6,14 +6,14 @@ class UserModal{
     createUser = async (user) => {
         let { data } = await axiosApi.post('/createUser', {
             ...user
-        })
-        return data
+         } )
+            return data
     }
     getUser = async (user) => {
         let { data } = await axiosApi.post('/getUser', {
             ...user
         })
-        return data
+    return data
     }
   
 }

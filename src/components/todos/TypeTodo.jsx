@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-function TypeTodo({ fetchTerm, todo, term }) {
+function TypeTodo({ fetchTerm, todo, term, createTodo }) {
 
     const [val, setVal] = useState(todo || '');
     return (
@@ -13,6 +13,11 @@ function TypeTodo({ fetchTerm, todo, term }) {
                 onChange={({ target: { value } }) => {
                     setVal(value)
                     fetchTerm(value.toString())
+                }}
+                onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                        createTodo()
+                    }
                 }}
             />
         </div>
