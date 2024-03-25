@@ -39,57 +39,47 @@ function Todo({ td, setTodos }) {
     return (
         <div className="view-todo">
             {
-                !isEdit ?
-                    <DelDoneBtns
-                        todo={td}
-                        done={done}
-                        completed={finishTodo}
-                        deleteTodo={deleteTodo}
+                !isEdit ? <div className="todo-wd-btns">
 
-                    /> :
-                    <span>
-                        <TypeTodo todo={todo} fetchTerm={fetchTerm} />
-                        <div className="edit-todo">
-                            <button onClick={editTodo}>Save</button>
+                    <div className="todo">
+                        <p>{done ? <s>{td?.todo}</s> : td?.todo}</p>
+                        <div className="date-time">
+                            <span>{td?.date}</span>
+                            <span>{td?.time}</span>
                         </div>
-                    </span>
+                    </div>
+
+                    <div className="todo-btns">
+                        <div>
+                            <button onClick={finishTodo}>{done ? 'undone' : 'done'}</button>
+                        </div>
+                        <div>
+                            <button onClick={deleteTodo}>X</button>
+                        </div>
+                        <div>
+                            <button onClick={edit}>{isEdit ? "back" : 'edit'}</button>
+                        </div>
+
+                    </div>
+                </div>
+                    :
+                    <div className="eidit-field-cont">
+                        <div className="edit-field" >
+                            <TypeTodo todo={todo} fetchTerm={fetchTerm} />
+                        </div>
+                        <div className="edit-todo" >
+                            <div>
+                                <button onClick={editTodo}>Save</button>
+                            </div>
+                            <div>
+                                <button onClick={edit}>back</button>
+                            </div>
+                        </div>
+                    </div>
             }
-            <div className="edit-todo">
-                <button onClick={edit}>{isEdit?"back":'edit'}</button>
-            </div>
 
         </div>
     );
 }
 
 export default Todo;
-
-
-
-
-
-
-
-
-
-
-export function DelDoneBtns({ todo, done, completed, deleteTodo }) {
-    return (
-        <React.Fragment>
-            <div className="todo">
-                <p>{done ? <s>{todo.todo}</s> : todo.todo}</p>
-                <div className="date-time">
-                    <span>{todo.date}</span>
-                    <span>{todo.time}</span>
-                </div>
-            </div>
-            <div className="delete-todo">
-                <button onClick={completed}>{done ? 'undone' : 'done'}</button>
-            </div>
-            <div className="edit-todo">
-                <button onClick={deleteTodo}>X</button>
-            </div>
-        </React.Fragment>
-    );
-
-}

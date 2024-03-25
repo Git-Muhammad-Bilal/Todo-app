@@ -7,6 +7,7 @@ function TypeTodo({ fetchTerm, todo, term, createTodo }) {
     return (
         <div className="create-todo-cont">
             <input
+                className="type-input"
                 type="text"
                 placeholder="Type your Todos"
                 value={term?.length === 0 ? '' : val}

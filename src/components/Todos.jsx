@@ -47,7 +47,7 @@ function Todos() {
             <div className="header-container">
                 <div className="title">
                     <Logout />
-                    <div>
+                    <div className="header-title">
                         <h3>Remember Todo</h3>
                     </div>
                 </div>
