@@ -9,7 +9,7 @@ function Todos() {
     const [val, setVal] = useState('');
     const [todos, setTodos] = useState([])
     let todosModal = new TodosModal()
-    let token = localStorage.getItem('jwtToken')
+    let token = localStorage.getItem('todoJwtToken')
     useEffect(() => {
         todosModal.getTodos().then((data) => {
             setTodos(data)

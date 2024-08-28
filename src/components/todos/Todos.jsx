@@ -10,7 +10,7 @@ function Todos({email}) {
     const [todos, setTodos] = useState([])
     let todosModal = new TodosModal()
     
-     let token = localStorage.getItem('jwtToken')
+     let token = localStorage.getItem('todoJwtToken')
      let parsedToken = JSON?.parse(token)
     
      useEffect(() => {

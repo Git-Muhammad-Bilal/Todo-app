@@ -26,7 +26,7 @@ axiosApi.interceptors.response.use(function (response) {
     if (response.data.jwtToken) {
         let tokenData = [{jwtToken:response.data.jwtToken, email:response.data.email}]
         let stringy = JSON.stringify(tokenData)
-        localStorage.setItem('jwtToken', stringy)
+        localStorage.setItem('todoJwtToken', stringy)
     }
     return response;
 }, function (error) {

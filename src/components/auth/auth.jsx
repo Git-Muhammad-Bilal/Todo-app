@@ -29,7 +29,7 @@ export default function Auth({ fields, userApi, btnText, linkUrl }) {
     const navigate = useNavigate();
     
     
-    let token = localStorage.getItem('jwtToken')
+    let token = localStorage.getItem('todoJwtToken')
     let parsedTkn = JSON.parse(token)
     
     if (parsedTkn && parsedTkn[0]?.jwtToken) {

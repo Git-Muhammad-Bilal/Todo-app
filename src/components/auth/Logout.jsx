@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 export default function Logout({ lgednUser }) {
 
-    let token = localStorage.getItem('jwtToken')
+    let token = localStorage.getItem('todoJwtToken')
     function logout() {
         if (token) {
-            localStorage.removeItem('jwtToken')
+            localStorage.removeItem('todoJwtToken')
         }
     }
     return (
